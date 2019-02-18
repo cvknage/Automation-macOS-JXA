@@ -1,0 +1,22 @@
+// File Origin: Right Here
+
+const IftttUtils = (function() {
+	return {
+        occuredAtDate: function(occuredAt) {
+            var isAfternoon = occuredAt.includes('PM');
+	
+            var dateString = occuredAt.replace('at ', '').replace('PM', ':00').replace('AM', ':00');
+            var date = new Date(dateString);
+            
+            if (isAfternoon && date.getHours() !== 12) {
+                date.setHours(date.getHours() + 12);
+            } else if (!isAfternoon && date.getHours() === 12) {
+                date.setHours(date.getHours() - 12);
+            }
+
+            return date;
+        }
+    };
+})();
+
+const occuredAtDate = IftttUtils.occuredAtDate;
