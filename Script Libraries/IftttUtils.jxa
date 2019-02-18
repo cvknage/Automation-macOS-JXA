@@ -1,4 +1,4 @@
-// File Origin: Right Here
+// File Origin: https://github.com/cvknage/Automation-macOS-JXA/blob/master/Script%20Libraries/IftttUtils.jxa
 
 const IftttUtils = (function() {
 	return {
