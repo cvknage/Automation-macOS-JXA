@@ -9,7 +9,7 @@ Automatically send an iMessage or SMS from your iPhone to whomeveer you like whe
 - Your smart alarm system turns on.
 - Well pretty much any event you can catch on IFTTT, Zapier or the likes there of.
 
-[Setup Instructions](./Script Libraries/@Script/send-message.md)
+[Setup Instructions](../Script Libraries/@Script/send-message.md)
 
 
 ## Repo Structure
