@@ -18,5 +18,3 @@ const IftttUtils = (function() {
         }
     };
 })();
-
-const occuredAtDate = IftttUtils.occuredAtDate;

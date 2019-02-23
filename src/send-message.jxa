@@ -1,0 +1,106 @@
+// ****** User Settings ****** //
+
+/* Set "false" to disable sending of message */
+const SEND_MESSAGE = true;
+
+/* Set "true" to delete the file in Dropbox */
+const DELETE_FILE = true;
+
+/* Set "true" to get debugging output in console */
+const IS_DEBUGGING = false;
+
+/* Alternative file path when calling script with no arguments (full path) */
+const FILE_PATH = '/Users/automator/Dropbox/IFTTT/Messages/new_message.txt';
+
+
+
+// ****** Send Message Script ****** //
+
+var Messages = Application('Messages');
+var app = Application.currentApplication();
+app.includeStandardAdditions = true;
+
+function run(input, parameters) {
+
+	var filePath;
+	if (FileUtils.fileExists(input.toString())) {
+		logDebug(`using input: ${input.toString()}`);
+        filePath = input.toString();
+    } else if (FileUtils.fileExists(FILE_PATH)) {
+		logDebug(`using FILE_PATH: ${FILE_PATH}`);
+        filePath = FILE_PATH;
+	} else {
+		logDebug(`input: ${input.toString()}`);
+		logDebug(`FILE_PATH: ${FILE_PATH}`);
+		throw Error('File not found');
+	}
+
+    var fileContent = FileUtils.readTextFile(filePath);
+    var message = JSON.parse(fileContent);
+    var messagingService = Messages.services[message.type];
+
+    var date = IftttUtils.occuredAtDate(message.occuredAt);
+    var shouldSend = shouldSendMessage(date, message.timeConstraints);
+    if (shouldSend) {
+        if (SEND_MESSAGE) {
+			logDebug('Sending message');
+            Messages.send(message.message, { to: messagingService.buddies[message.to] });
+        }
+    }
+
+    if (DELETE_FILE) {
+		logDebug('Deleting file');
+        FileUtils.trashFile(filePath);
+    }
+
+    return shouldSend ? `Sent message: [${message.message}] to: [${message.to}]` : `Didn't send message : [${message.message}] to: [${message.to}]`;
+}
+
+function shouldSendMessage(occuredDate, timeConstraints) {
+    if (!timeConstraints.enabled) {
+        return true;
+    }
+
+    var shouldSend = true;
+    for (var constraint of timeConstraints.constraints) {
+        var constraintDate = new Date();
+        if (constraint.month) { constraintDate.setMonth(constrainth.month - 1) }
+        if (constraint.date) { constraintDate.setDate(constraint.date); }
+        if (constraint.hours) { constraintDate.setHours(constraint.hours); }
+        if (constraint.minutes) { constraintDate.setMinutes(constraint.minutes); }
+        constraintDate.setSeconds(0);
+        constraintDate.setMilliseconds(0);
+
+        switch (constraint.operation) {
+            case ">":
+                if (occuredDate <= constraintDate) {
+                    shouldSend = shouldSend && false;
+                }
+                break;
+            case "<":
+                if (occuredDate >= constraintDate) {
+                    shouldSend = shouldSend && false;
+                }
+                break;
+            case "=":
+                if (occuredDate.getTime() !== constraintDate.getTime()) {
+                    shouldSend = shouldSend && false;
+                }
+                break;
+        }
+    }
+
+    return shouldSend;
+}
+
+function logDebug(input) {
+    if(IS_DEBUGGING) {
+        console.log(input);
+    }
+}
+
+
+// import Library('FileUtils');
+
+
+// import Library('IftttUtils');

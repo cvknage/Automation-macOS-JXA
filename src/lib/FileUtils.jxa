@@ -172,18 +172,3 @@ var FileUtils = (function() {
 		}
 	};
 })();
-
-const chooseFile = FileUtils.chooseFile;
-const copyFile = FileUtils.copyFile;
-const createFolder = FileUtils.createFolder;
-const createFolderIfNeeded = FileUtils.createFolderIfNeeded;
-const fileExists = FileUtils.fileExists;
-const folderExists = FileUtils.folderExists;
-const getCurrentApp = FileUtils.getCurrentApp;
-const getDirectoryContents = FileUtils.getDirectoryContents;
-const getFileOrFolderExists = FileUtils.getFileOrFolderExists;
-const readTextFile = FileUtils.readTextFile;
-const trashFile = FileUtils.trashFile;
-const trashFileOrFolder = FileUtils.trashFileOrFolder;
-const trashFolder = FileUtils.trashFolder;
-const writeTextFile = FileUtils.writeTextFile;

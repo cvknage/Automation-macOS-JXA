@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>419</string>
+	<key>AMApplicationVersion</key>
+	<string>2.6</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.1.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>fileNames</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.path</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action</string>
+				<key>ActionName</key>
+				<string>Get Specified Finder Items</string>
+				<key>ActionNameComment</key>
+				<string>Enable when: Testing with specefied input</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>fileNames</key>
+					<array>
+						<string>~/Dropbox/IFTTT/Messages/new_message.txt</string>
+					</array>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.SpecifiedFiles</string>
+				<key>CFBundleVersion</key>
+				<string>1.1.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryFilesAndFolders</string>
+				</array>
+				<key>Class Name</key>
+				<string>SpecifiedFilesAction</string>
+				<key>Disabled</key>
+				<true/>
+				<key>IgnoresInput</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>7BEEDCB6-2398-44B7-974E-839787373E21</string>
+				<key>Keywords</key>
+				<array>
+					<string>File</string>
+					<string>Choose</string>
+					<string>Find</string>
+					<string>Get</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>DFA1FFE0-AEEA-4141-AD40-69869F7979FB</string>
+				<key>UUID</key>
+				<string>FD274D41-1FA9-4C9E-BB38-1FB989BBA66C</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Finder</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<array/>
+						<key>name</key>
+						<string>fileNames</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>527.000000:112.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Get Specified Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>2.0.3</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<dict/>
+					<key>CheckedForUserDefaultShell</key>
+					<dict/>
+					<key>inputMethod</key>
+					<dict/>
+					<key>shell</key>
+					<dict/>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.string</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run Shell Script.action</string>
+				<key>ActionName</key>
+				<string>Run Shell Script</string>
+				<key>ActionNameComment</key>
+				<string>Enable when: Running script from seperate file</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>COMMAND_STRING</key>
+					<string>osascript -l JavaScript ~/Dropbox/Automation/send-message.scpt "$@"</string>
+					<key>CheckedForUserDefaultShell</key>
+					<true/>
+					<key>inputMethod</key>
+					<integer>1</integer>
+					<key>shell</key>
+					<string>/bin/bash</string>
+					<key>source</key>
+					<string></string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.RunShellScript</string>
+				<key>CFBundleVersion</key>
+				<string>2.0.3</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunShellScriptAction</string>
+				<key>Disabled</key>
+				<true/>
+				<key>InputUUID</key>
+				<string>8D660AD6-CA66-42E3-A8E4-E6AF31AA3C54</string>
+				<key>Keywords</key>
+				<array>
+					<string>Shell</string>
+					<string>Script</string>
+					<string>Command</string>
+					<string>Run</string>
+					<string>Unix</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>8BF5393D-7805-48B7-B1B2-5F4E639BDD8B</string>
+				<key>UUID</key>
+				<string>F8309EED-6F2B-4071-A81C-4594E94BF960</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<integer>0</integer>
+						<key>name</key>
+						<string>inputMethod</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+					<key>1</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>1</string>
+					</dict>
+					<key>2</key>
+					<dict>
+						<key>default value</key>
+						<false/>
+						<key>name</key>
+						<string>CheckedForUserDefaultShell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>2</string>
+					</dict>
+					<key>3</key>
+					<dict>
+						<key>default value</key>
+						<string></string>
+						<key>name</key>
+						<string>COMMAND_STRING</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>3</string>
+					</dict>
+					<key>4</key>
+					<dict>
+						<key>default value</key>
+						<string>/bin/sh</string>
+						<key>name</key>
+						<string>shell</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>4</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<false/>
+				<key>location</key>
+				<string>527.000000:154.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/English.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run JavaScript.action</string>
+				<key>ActionName</key>
+				<string>Run JavaScript</string>
+				<key>ActionNameComment</key>
+				<string>Disable when: Running script from seperate file</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>// ****** User Settings ****** ///* Set "false" to disable sending of message */const SEND_MESSAGE = true;/* Set "true" to delete the file in Dropbox */const DELETE_FILE = true;/* Set "true" to get debugging output in console */const IS_DEBUGGING = false;/* Alternative file path when calling script with no arguments (full path) */const FILE_PATH = '/Users/automator/Dropbox/IFTTT/Messages/new_message.txt';// ****** Send Message Script ****** //var Messages = Application('Messages');var app = Application.currentApplication();app.includeStandardAdditions = true;function run(input, parameters) {	var filePath;	if (FileUtils.fileExists(input.toString())) {		logDebug(`using input: ${input.toString()}`);        filePath = input.toString();    } else if (FileUtils.fileExists(FILE_PATH)) {		logDebug(`using FILE_PATH: ${FILE_PATH}`);        filePath = FILE_PATH;	} else {		logDebug(`input: ${input.toString()}`);		logDebug(`FILE_PATH: ${FILE_PATH}`);		throw Error('File not found');	}    var fileContent = FileUtils.readTextFile(filePath);    var message = JSON.parse(fileContent);    var messagingService = Messages.services[message.type];    var date = IftttUtils.occuredAtDate(message.occuredAt);    var shouldSend = shouldSendMessage(date, message.timeConstraints);    if (shouldSend) {        if (SEND_MESSAGE) {			logDebug('Sending message');            Messages.send(message.message, { to: messagingService.buddies[message.to] });        }    }    if (DELETE_FILE) {		logDebug('Deleting file');        FileUtils.trashFile(filePath);    }    return shouldSend ? `Sent message: [${message.message}] to: [${message.to}]` : `Didn't send message : [${message.message}] to: [${message.to}]`;}function shouldSendMessage(occuredDate, timeConstraints) {    if (!timeConstraints.enabled) {        return true;    }    var shouldSend = true;    for (var constraint of timeConstraints.constraints) {        var constraintDate = new Date();        if (constraint.month) { constraintDate.setMonth(constrainth.month - 1) }        if (constraint.date) { constraintDate.setDate(constraint.date); }        if (constraint.hours) { constraintDate.setHours(constraint.hours); }        if (constraint.minutes) { constraintDate.setMinutes(constraint.minutes); }        constraintDate.setSeconds(0);        constraintDate.setMilliseconds(0);        switch (constraint.operation) {            case "&gt;":                if (occuredDate &lt;= constraintDate) {                    shouldSend = shouldSend &amp;&amp; false;                }                break;            case "&lt;":                if (occuredDate &gt;= constraintDate) {                    shouldSend = shouldSend &amp;&amp; false;                }                break;            case "=":                if (occuredDate.getTime() !== constraintDate.getTime()) {                    shouldSend = shouldSend &amp;&amp; false;                }                break;        }    }    return shouldSend;}function logDebug(input) {    if(IS_DEBUGGING) {        console.log(input);    }}// File Origin: https://github.com/cvknage/Automation-macOS-JXA/blob/master/Script%20Libraries/IftttUtils.jxaconst IftttUtils = (function() {	return {        occuredAtDate: function(occuredAt) {            var isAfternoon = occuredAt.includes('PM');	            var dateString = occuredAt.replace('at ', '').replace('PM', ':00').replace('AM', ':00');            var date = new Date(dateString);                        if (isAfternoon &amp;&amp; date.getHours() !== 12) {                date.setHours(date.getHours() + 12);            } else if (!isAfternoon &amp;&amp; date.getHours() === 12) {                date.setHours(date.getHours() - 12);            }            return date;        }    };})();// File Origin: https://github.com/dagware/DanThomas/blob/master/JXA/FileUtils.md// ======= BEGIN CLASS SOURCE CODE =========================================// THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESSED OR IMPLIED WARRANTIES,// INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY// AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL// THE REGENTS OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,// INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT// NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF// THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.var FileUtils = (function() {	return {		chooseFile: function(prompt, type) {			try {				var options = {};				if (prompt) options.withPrompt = prompt;				if (type) options.ofType = type;				return this.getCurrentApp().chooseFile(options).toString();			} catch (e) {				return "";			}		},		copyFile: function(fromPath, toPath, throwIfFail) {			var error;			var result = ObjC.unwrap(				$.NSFileManager.defaultManager				.copyItemAtPathToPathError(					$(fromPath).stringByStandardizingPath,					$(toPath).stringByStandardizingPath,					error				)			);			if (error || (!result &amp;&amp; throwIfFail))				throw Error('Could not copy "' + fromPath + '" to "' + toPath + '"');			return result;		},		createFolder: function(path, createIntermediateDirectories) {			var error = $();			if (!$.NSFileManager.defaultManager				.createDirectoryAtPathWithIntermediateDirectoriesAttributesError(					$(path).stringByStandardizingPath,					createIntermediateDirectories,					$(), error)) {				throw Error("Could not create folder '" + path + "'");			}		},		createFolderIfNeeded: function(path, createIntermediateDirectories) {			if (!this.folderExists(path))				this.createFolder(path, createIntermediateDirectories);		},		fileExists: function(path) {			var result = this.getFileOrFolderExists(path);			return result.exists &amp;&amp; result.isFile;		},		folderExists: function(path) {			var result = this.getFileOrFolderExists(path);			return result.exists &amp;&amp; !result.isFile;		},		getCurrentApp: function() {			var app = Application.currentApplication();			app.includeStandardAdditions = true;			return app;		},		getDirectoryContents: function(strPath, includeSubfolders, includeDotFiles) {			var method = includeSubfolders ?				"subpathsOfDirectoryAtPathError" :				"contentsOfDirectoryAtPathError";			var error;			var contents =				ObjC.deepUnwrap(					$.NSFileManager.defaultManager[method](						$(strPath)						.stringByStandardizingPath, error					)				);			if (error)				throw Error('Could not get contents of "' + strPath + '"');			if (!includeDotFiles) {				contents = contents.filter(function(item) {					return !item.startsWith(".") &amp;&amp; !item.includes("/.");				});			}			return contents;		},		getFileOrFolderExists: function(path) {			var isDirectory = Ref();			var exists = $.NSFileManager.defaultManager				.fileExistsAtPathIsDirectory(path, isDirectory);			return {				exists: exists,				isFile: isDirectory[0] !== 1			};		},		readTextFile: function(strPath) {			var error;			var str = ObjC.unwrap(				$.NSString.stringWithContentsOfFileEncodingError(					$(strPath).stringByStandardizingPath,					$.NSUTF8StringEncoding,					error				)			);			if (error)				throw Error('Could not read file "' + strPath + '"');			return str;		},		trashFile: function(path, throwIfFail) {			return this.trashFileOrFolder(path, true, throwIfFail);		},		trashFileOrFolder: function(path, isFile, throwIfFail) {			var fileOrFolderText = isFile ? "file" : "folder";			if (!path)				throw Error("Path is required in trashFileOrFolder");			if (isFile === undefined)				throw Error("isFile is required in trashFileOrFolder");			if (!isFile &amp;&amp; path.endsWith("/"))				path = path.substring(0, path.length - 1);			var exists = this.getFileOrFolderExists(path);			if (!exists.exists)				return false;			if (exists.isFile !== isFile) {				if (throwIfFail)					throw Error("Path to be deleted '" + path + "' is not a " +						fileOrFolderText);				return false;			}			var fileURL = $.NSURL.fileURLWithPathIsDirectory($(path), !isFile);			var error;			var result = ObjC.unwrap(				$.NSFileManager.defaultManager				.trashItemAtURLResultingItemURLError(					fileURL,					null,					error				)			);			if (error || (!result &amp;&amp; throwIfFail))				throw Error("Could not trash " + fileOrFolderText + "'" + path + "'");			return result;		},		trashFolder: function(path, throwIfFail) {			return this.trashFileOrFolder(path, false, throwIfFail);		},		writeTextFile: function(strContent, strPath) {			var str = $.NSString.alloc.initWithUTF8String(strContent);			var result = str.writeToFileAtomicallyEncodingError(				$(strPath).stringByStandardizingPath,				true,				$.NSUTF8StringEncoding,				null);			if (!result)				throw Error("Could not write file '" + strPath + "'");		}	};})();</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunJavaScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunJavaScriptAction</string>
+				<key>Disabled</key>
+				<false/>
+				<key>InputUUID</key>
+				<string>F3AE533B-4E43-479B-AACD-B4B10F66AC67</string>
+				<key>Keywords</key>
+				<array>
+					<string>Run</string>
+					<string>JavaScript</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>7AB99FE3-12A1-478A-933E-F21CA70732C9</string>
+				<key>UUID</key>
+				<string>F102112B-56C1-4F8C-BBDB-447DC5961518</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>function run(input, parameters) {
+	
+	// Your script goes here
+
+	return input;
+}</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>527.000000:400.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run JavaScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>03C5C8CD-685A-480C-9C02-5F971121D4ED</key>
+		<dict>
+			<key>from</key>
+			<string>FD274D41-1FA9-4C9E-BB38-1FB989BBA66C - FD274D41-1FA9-4C9E-BB38-1FB989BBA66C</string>
+			<key>to</key>
+			<string>F8309EED-6F2B-4071-A81C-4594E94BF960 - F8309EED-6F2B-4071-A81C-4594E94BF960</string>
+		</dict>
+		<key>0CC8306B-3D8C-4795-A7E2-283D098FAF01</key>
+		<dict>
+			<key>from</key>
+			<string>F8309EED-6F2B-4071-A81C-4594E94BF960 - F8309EED-6F2B-4071-A81C-4594E94BF960</string>
+			<key>to</key>
+			<string>F102112B-56C1-4F8C-BBDB-447DC5961518 - F102112B-56C1-4F8C-BBDB-447DC5961518</string>
+		</dict>
+	</dict>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>folderActionFolderPath</key>
+		<string>~/Dropbox/IFTTT/Messages</string>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.folderAction</string>
+	</dict>
+</dict>
+</plist>
