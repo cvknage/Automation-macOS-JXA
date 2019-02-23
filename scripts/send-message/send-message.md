@@ -65,7 +65,7 @@ That's it!
 ```
   
 **Example explained**
-```JSON
+```JSON5
 {
   "type": "SMS",                   // Can either be an iMessage account or 'SMS'
   "to": "+4500000000",             // The phone number of the recipient of the message.
