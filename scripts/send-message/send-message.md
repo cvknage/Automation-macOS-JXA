@@ -94,7 +94,7 @@ That's it!
 }
 ```
 
-This example would an SMS, from "your iPhone", to: "+4500000000", with the message: "Test message." But only between 10AM and 8PM.
+This example would send an SMS, from "your iPhone", to: "+4500000000", with the message: "Test message." But only between 10AM and 8PM.
 
 **IFTT Dropbox file**  
 <img width="300" src="../../images/send-message_IFTTT-Dropbox.png">
